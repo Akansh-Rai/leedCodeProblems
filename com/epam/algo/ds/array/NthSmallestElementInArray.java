@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package com.epam.algo.ds.array;
+
+import java.util.PriorityQueue;
+
+import javax.management.Query;
+
+/**
+ * @author Akansh_Rai
+ * 
+ *         https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/
+ * 
+ * 
+ *
+ */
+public class NthSmallestElementInArray {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int arr[] = { 7, 10, 4, 3, 20, 15 };
+		System.out.println(" Nth Smallest Element In Array " + NthSmallestElementInArray(arr, 2));
+
+	}
+
+	private static int NthSmallestElementInArray(int[] arr, int k) {
+
+		PriorityQueue<Integer> q = new PriorityQueue<>((a,b)-> b-a);
+
+		for (int num : arr) {
+			q.offer(num);
+			//if (q.size() > k)
+				//q.remove();
+		}
+
+		return q.remove();
+	}
+
+}
