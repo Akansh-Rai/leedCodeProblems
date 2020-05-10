@@ -20,18 +20,18 @@ public class CountNumberOfTeams {
 		System.out.println("Total no of team : " + numTeams(arr));
 	}
 
-	public static int numTeams(int[] rating) {
-		int n = rating.length;
-		int[] lowerThan = new int[n];
-		int[] higherThan = new int[n];
+	public static int numTeams(int[] ratings) {
+		int len = ratings.length;
+		int[] lowerThan = new int[len];
+		int[] higherThan = new int[len];
 		int result = 0;
-		for (int i = 1; i < rating.length; i++) {
+		for (int i = 1; i < len; i++) {
 			for (int j = i - 1; j >= 0; j--) {
-				if (rating[j] < rating[i]) {
+				if (ratings[j] < ratings[i]) {
 					result += lowerThan[j];
 					lowerThan[i]++;
 				}
-				if (rating[j] > rating[i]) {
+				if (ratings[j] > ratings[i]) {
 					result += higherThan[j];
 					higherThan[i]++;
 				}
