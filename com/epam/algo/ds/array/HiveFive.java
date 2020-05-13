@@ -58,7 +58,7 @@ public class HiveFive {
 			}
 			System.out.println("[ " + id + " , " + sum/5 +"]");
 		}
-		
+
 	}
 
 }
