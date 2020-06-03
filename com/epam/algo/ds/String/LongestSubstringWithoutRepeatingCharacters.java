@@ -32,7 +32,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	}
 
 	public static int lengthOfLongestSubstring(String input) {
-		if (input == "" || input == null)
+		if (input == null || input.isEmpty())
 			return 0;
 
 		int[] map = new int[512];
