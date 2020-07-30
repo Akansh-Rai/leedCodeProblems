@@ -13,8 +13,10 @@ public class NumberOfIslands {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		char[][] grid = { { '1', '1', '1', '1', '0' }, { '1', '1', '0', '1', '0' }, { '1', '1', '0', '0', '0' },
-				{ '0', '0', '0', '0', '0' } };
+		char[][] grid = { { '1', '1', '1', '1', '0' },
+				          { '1', '1', '0', '1', '0' },
+				          { '1', '1', '0', '0', '0' },
+				          { '0', '0', '0', '0', '0' } };
 		System.out.println(numIslands(grid));
 	}
 
@@ -28,7 +30,6 @@ public class NumberOfIslands {
 			for (int j = 0; j < cols; ++j) {
 				if (grid[i][j] == '1') {
 					markCurrentIsland(grid, i, j, rows, cols);
-					// System.out.println("Result");
 					result++;
 				}
 			}
