@@ -15,7 +15,7 @@ public class ReorganizeString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(reorganizeString("aab"));
+		System.out.println(reorganizeString("aabcbd"));
 	}
 
 	public static String reorganizeString(String input) {

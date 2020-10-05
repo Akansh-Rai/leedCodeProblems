@@ -12,15 +12,15 @@ import java.util.Stack;
  * https://leetcode.com/problems/binary-tree-preorder-traversal
  */
 public class PreOrderTraversal_Iterative {
-	public List<Integer> preorderTraversal(TreeNode root) {
-		Stack<TreeNode> stack = new Stack<>();
+	public List<Integer> preorderTraversal(TreeNode<Integer> root) {
+		Stack<TreeNode<Integer>> stack = new Stack<>();
 		List<Integer> result = new ArrayList<>();
 
 		if (root != null)
 			stack.push(root);
 
 		while (!stack.isEmpty()) {
-			TreeNode node = stack.pop();
+			TreeNode<Integer> node = stack.pop();
 			result.add(node.val);
 			if (node.right != null)
 				stack.push(node.right);

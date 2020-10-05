@@ -19,7 +19,7 @@ public class CoinChangeDp {
 
 	public static int getNumberOfCoins(int[] coins, int amount) {
 		int max = amount + 1;
-		int[] numbers = new int[amount + 1];
+		int[] numbers = new int[max];
 		Arrays.fill(numbers, max);
 		numbers[0] = 0;
 		for (int i = 1; i <= amount; i++) {

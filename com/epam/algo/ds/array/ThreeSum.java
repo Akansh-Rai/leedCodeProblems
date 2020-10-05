@@ -22,34 +22,43 @@ public class ThreeSum {
 	}
 
 	public static List<List<Integer>> threeSum(int[] arr) {
-		if (arr.length == 0)
-			return null;
+		List<List<Integer>> result = new ArrayList<>();
+
 		Arrays.sort(arr);
 
-		List<List<Integer>> result = new ArrayList<List<Integer>>();
-		for (int i = 0; i < arr.length - 1; i++) {
+		for (int i = 0; i < arr.length; i++) {
+
+			// Declare and intialize two indexes
 			int start = i + 1;
 			int end = arr.length - 1;
-			if (i > 0 && arr[i] == arr[i - 1])
+
+			/*
+			 * To ignore duplicates, Never consider consecutive indices with same value.
+			 */
+			if (i > 0 && arr[i] == arr[i - 1]) {
 				continue;
+			}
 
 			while (start < end) {
-				int sum = arr[i] + arr[start] + arr[end];
-				if (sum == 0) {
-					List<Integer> temp = new ArrayList<>();
-					temp.add(arr[i]);
-					temp.add(arr[start]);
-					temp.add(arr[end]);
+
+				// Ignore duplicates
+				if (end < arr.length - 1 && arr[end] == arr[end + 1]) {
+					end--;
+					continue;
+				}
+
+				// If triplets is found then put them in a list
+				if (arr[i] + arr[start] + arr[end] == 0) {
+					List<Integer> val = Arrays.asList(arr[i], arr[start], arr[end]);
+					result.add(val);
 					start++;
 					end--;
-
-				} else if (sum < 0) {
+				} else if (arr[i] + arr[start] + arr[end] < 0) {
 					start++;
 				} else {
 					end--;
 				}
-
-			} // end while
+			}
 		}
 
 		return result;

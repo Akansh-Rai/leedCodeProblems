@@ -17,7 +17,7 @@ public class CoinChnage {
 
 	public static void main(String[] args) {
 		int[] coins = { 3, 2, 5 };
-		int sum = 9;
+		int sum = 12;
 		System.out.println(getCoins(coins, sum));
 	}
 

@@ -11,11 +11,11 @@ import java.util.List;
  *         https://leetcode.com/problems/binary-tree-preorder-traversal
  */
 public class PreOrderTraversal_Recurssive {
-	public List<Integer> preorderTraversal(TreeNode root) {
+	public List<Integer> preorderTraversal(TreeNode<Integer> root) {
 		return preorderTraversal(root, new ArrayList<Integer>());
 	}
 
-	public List<Integer> preorderTraversal(TreeNode root, List<Integer> result) {
+	public List<Integer> preorderTraversal(TreeNode<Integer> root, List<Integer> result) {
 		if (root == null)
 			return result;
 		result.add(root.val);

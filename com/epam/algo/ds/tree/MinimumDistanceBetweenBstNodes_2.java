@@ -14,7 +14,7 @@ public class MinimumDistanceBetweenBstNodes_2 {
 
 	List<Integer> in = new ArrayList<Integer>();
 
-	public int minDiffInBST(TreeNode root) {
+	public int minDiffInBST(TreeNode<Integer> root) {
 		inOrder(root);
 		int min = Integer.MAX_VALUE;
 		for (int i = 1; i < in.size(); i++) {
@@ -24,7 +24,7 @@ public class MinimumDistanceBetweenBstNodes_2 {
 		return min;
 	}
 
-	private void inOrder(TreeNode root) {
+	private void inOrder(TreeNode<Integer> root) {
 		if (root == null)
 			return;
 		inOrder(root.left);

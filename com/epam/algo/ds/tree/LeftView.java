@@ -8,12 +8,12 @@ public class LeftView {
 	private int max = 0;
 	List<Integer> result = new ArrayList<>();
 
-	public List<Integer> rightSideView(TreeNode root) {
+	public List<Integer> rightSideView(TreeNode<Integer> root) {
 		rightSideView(root, 1);
 		return result;
 	}
 
-	public void rightSideView(TreeNode root, int curLevel) {
+	public void rightSideView(TreeNode<Integer> root, int curLevel) {
 		if (root == null)
 			return;
 		if (max < curLevel) {

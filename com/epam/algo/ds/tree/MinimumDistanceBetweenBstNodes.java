@@ -12,14 +12,14 @@ public class MinimumDistanceBetweenBstNodes {
 	int result = Integer.MAX_VALUE;
     int last = Integer.MIN_VALUE;
     
-    public int minDiffInBST(TreeNode root) {
+    public int minDiffInBST(TreeNode<Integer> root) {
         if (root == null)
             return 0;
         findMin(root);
         return result;
     }
     
-    private void findMin(TreeNode root) {
+    private void findMin(TreeNode<Integer> root) {
         if(root == null) return;
         findMin(root.left);
         if(last > 0)

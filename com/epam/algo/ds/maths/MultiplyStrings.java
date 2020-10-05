@@ -10,8 +10,8 @@ package com.epam.algo.ds.maths;
 public class MultiplyStrings {
 	
 	public static void main(String[] args) {
-		String num1 = "9";
-		String num2 = "9";
+		String num1 = "9341324";
+		String num2 = "934123412";
 		
 		/*if(num1.length() == 1) {
             if (num1.charAt(0) - '0' == 0) return "0";            
